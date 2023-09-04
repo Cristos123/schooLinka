@@ -25,7 +25,8 @@
     "sequelize": "^6.32.1",
     "sequelize-typescript": "^2.1.5",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
