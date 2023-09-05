@@ -1,5 +1,5 @@
-import env from "@config/env";
-import ExceptionError from "@libs/exceptions";
+import env from "../config/env";
+import ExceptionError from "../libs/exceptions";
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 

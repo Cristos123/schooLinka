@@ -1,6 +1,6 @@
 import { Router } from "express";
 import * as Post from "../controllers/post";
-import { isCurrentUserLoggedIn } from "@utils/authCheck";
+import { isCurrentUserLoggedIn } from "../utils/authCheck";
 
 const router = Router();
 

@@ -1,7 +1,7 @@
 import * as User from "../repositories/user";
 import ExceptionError from "../libs/exceptions";
 import { ErrorResponse } from "../interfaces/error";
-import { getToken } from "@utils/helpers";
+import { getToken } from "../utils/helpers";
 import bcrypt from "bcrypt";
 import { UserType } from "src/type/UserType";
 

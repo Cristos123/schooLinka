@@ -2,8 +2,8 @@ import express, { Express, Request, Response } from "express";
 import { env } from "./config/index";
 import bodyParser from "body-parser";
 import cors from "cors";
-import routes from "@routes/index";
-import { authCheck } from "@utils/authCheck";
+import routes from "./routes/index";
+import { authCheck } from "./utils/authCheck";
 
 const app: Express = express();
 const port = env.NODE_ENV || 30000;
