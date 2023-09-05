@@ -40,7 +40,7 @@ import { Sequelize } from "sequelize";
 
 let postgresClient;
 const node_env = env.NODE_ENV;
-if (node_env == "production") {
+if (node_env != "development") {
   // Production configuration  URL
   postgresClient = new Sequelize(env.HOST, {
     logging: false,
