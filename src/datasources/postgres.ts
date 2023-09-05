@@ -1,23 +1,32 @@
 import { env } from "../config/index";
 import { Sequelize } from "sequelize";
 
-const postgresClient = new Sequelize(
-  env.DATABASE as string,
-  env.USER as string,
-  env.PASSWORD as string,
-  {
-    host: env.HOSTNAME || "localhost",
-    dialect: "postgres",
-    port: parseInt(env.PORT as string),
-    logging: false,
-    pool: {
-      max: 2,
-      min: 0,
-      acquire: 3000,
-      idle: 0,
-    },
-  }
-);
+// const postgresClient = new Sequelize(
+//   env.DATABASE as string,
+//   env.USER as string,
+//   env.PASSWORD as string,
+//   {
+//     host: env.HOSTNAME || "localhost",
+//     dialect: "postgres",
+//     port: parseInt(env.PORT as string),
+//     logging: false,
+//     pool: {
+//       max: 2,
+//       min: 0,
+//       acquire: 3000,
+//       idle: 0,
+//     },
+//   }
+// );
+const postgresClient = new Sequelize(env.HOST, {
+  logging: false,
+  pool: {
+    max: 2,
+    min: 0,
+    acquire: 3000,
+    idle: 0,
+  },
+});
 
 postgresClient
   .sync({ alter: true })
