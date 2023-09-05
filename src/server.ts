@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from "express";
-import { env } from "@config/index";
+import { env } from "./config/index";
 import bodyParser from "body-parser";
 import cors from "cors";
 import routes from "@routes/index";
