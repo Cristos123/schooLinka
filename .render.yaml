@@ -1,5 +1,0 @@
-services:
-  - name: Schoolinka
-    type: web
-    buildCommand: npm install && npm run build
-    startCommand: node dist/index.js
