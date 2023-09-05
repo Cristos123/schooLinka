@@ -1,14 +1,14 @@
-import { env } from "../config/index";
+// import { env } from "../config/index";
 import { Sequelize } from "sequelize";
 
 const postgresClient = new Sequelize(
-  env.DATABASE as string,
-  env.USERNAME as string,
-  env.PASSWORD as string,
+  process.env.DATABASE as string,
+  process.env.USERNAME as string,
+  process.env.PASSWORD as string,
   {
-    host: env.HOSTNAME || "localhost",
+    host: process.env.HOSTNAME || "localhost",
     dialect: "postgres",
-    port: parseInt(env.PORT as string),
+    port: parseInt(process.env.PORT as string),
     logging: false,
     pool: {
       max: 2,
