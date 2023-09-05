@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize";
 
 const postgresClient = new Sequelize(
   env.DATABASE as string,
-  env.USER as string,
+  env.USERNAME as string,
   env.PASSWORD as string,
   {
     host: env.HOSTNAME || "localhost",
